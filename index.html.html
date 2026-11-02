@@ -1,0 +1,681 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Muhammad Lucky Rezaldi - Professional Portfolio</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        navy: {
+                            800: '#0B192C',
+                            900: '#1E3E62',
+                        },
+                        dark: {
+                            900: '#121212',
+                            800: '#1A1A1A',
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- Google Fonts Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .modal-active {
+            overflow: hidden;
+        }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-800 antialiased selection:bg-navy-900 selection:text-white">
+
+    <!-- Header / Navigation -->
+    <header class="fixed top-0 left-0 right-0 z-50 bg-slate-50/90 backdrop-blur-md border-b border-slate-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <a href="#hero" class="text-xl font-bold tracking-tight text-navy-800">
+                LUCKY<span class="text-slate-400">.REZALDI</span>
+            </a>
+            
+            <!-- Desktop Navigation -->
+            <nav class="hidden md:flex items-center space-x-6 text-sm font-medium text-slate-600">
+                <a href="#hero" class="hover:text-navy-900 transition-colors">Beranda</a>
+                <a href="#about" class="hover:text-navy-900 transition-colors">Tentang</a>
+                <a href="#education" class="hover:text-navy-900 transition-colors">Pendidikan</a>
+                <a href="#experience" class="hover:text-navy-900 transition-colors">Pengalaman</a>
+                <a href="#projects" class="hover:text-navy-900 transition-colors">Proyek & Publikasi</a>
+                <a href="#skills" class="hover:text-navy-900 transition-colors">Keahlian</a>
+                <a href="#certificates" class="hover:text-navy-900 transition-colors">Sertifikasi</a>
+            </nav>
+
+            <a href="#contact" class="hidden md:inline-flex items-center justify-center px-5 py-2.5 rounded-full text-sm font-semibold text-white bg-navy-800 hover:bg-black transition-all duration-300 shadow-md shadow-navy-800/20">
+                Hubungi Saya
+            </a>
+
+            <!-- Mobile Menu Button -->
+            <button id="menu-btn" class="md:hidden text-slate-700 hover:text-navy-800 focus:outline-none p-2">
+                <i class="fa-solid fa-bars text-2xl"></i>
+            </button>
+        </div>
+
+        <!-- Mobile Navigation Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-b border-slate-200 px-4 pt-2 pb-6 space-y-3">
+            <a href="#hero" class="block py-2 text-slate-600 font-medium hover:text-navy-800">Beranda</a>
+            <a href="#about" class="block py-2 text-slate-600 font-medium hover:text-navy-800">Tentang</a>
+            <a href="#education" class="block py-2 text-slate-600 font-medium hover:text-navy-800">Pendidikan</a>
+            <a href="#experience" class="block py-2 text-slate-600 font-medium hover:text-navy-800">Pengalaman</a>
+            <a href="#projects" class="block py-2 text-slate-600 font-medium hover:text-navy-800">Proyek & Publikasi</a>
+            <a href="#skills" class="block py-2 text-slate-600 font-medium hover:text-navy-800">Keahlian</a>
+            <a href="#certificates" class="block py-2 text-slate-600 font-medium hover:text-navy-800">Sertifikasi</a>
+            <a href="#contact" class="block text-center mt-4 w-full py-2.5 rounded-xl text-white bg-navy-800 font-semibold">Hubungi Saya</a>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="hero" class="pt-32 pb-20 md:pt-40 md:pb-28 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+            <div class="lg:col-span-7 space-y-6">
+                <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-slate-100 border border-slate-200 text-xs font-semibold text-navy-800">
+                    <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+                    Sosiologi & Financial Analytic Professional
+                </div>
+                <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-slate-900 tracking-tight leading-tight">
+                    Muhammad Lucky <span class="text-navy-800">Rezaldi</span>
+                </h1>
+                <p class="text-lg sm:text-xl font-medium text-navy-900 border-l-4 border-navy-800 pl-4 py-1 italic bg-slate-100/60 rounded-r-lg">
+                    "Trust with Process, Analytical Mindset, Financial Insight, Professional Growth."
+                </p>
+                <p class="text-slate-600 leading-relaxed max-w-2xl text-base sm:text-lg">
+                    Lulusan Cumlaude S1 Sosiologi UIN Sunan Gunung Djati Bandung dengan integritas tinggi, kemampuan analitis data yang kuat, serta pengalaman profesional di bidang riset, pelayanan nasabah, hingga administrasi sosial.
+                </p>
+                <div class="pt-4 flex flex-wrap gap-4">
+                    <a href="#contact" class="px-7 py-3.5 rounded-xl text-white bg-navy-800 hover:bg-black font-semibold shadow-lg shadow-navy-800/20 transition-all duration-300 flex items-center gap-2">
+                        <i class="fa-solid fa-paper-plane"></i> Kontak Saya
+                    </a>
+                    <a href="#experience" class="px-7 py-3.5 rounded-xl text-slate-700 bg-white border border-slate-300 hover:bg-slate-100 font-semibold transition-all duration-300 flex items-center gap-2">
+                        Lihat Portofolio <i class="fa-solid fa-arrow-down text-xs"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="lg:col-span-5 flex justify-center">
+                <div class="relative w-64 h-80 sm:w-72 sm:h-96 rounded-2xl overflow-hidden shadow-2xl border-4 border-white bg-slate-200 group">
+                    <img src="https://i.ibb.co.com/B529N3mk/2x3.jpg" alt="Muhammad Lucky Rezaldi" class="w-full h-full object-cover object-top transition-transform duration-500 group-hover:scale-105" onerror="this.src='https://placehold.co/400x600/0B192C/FFF?text=Lucky+Rezaldi'">
+                    <div class="absolute inset-0 bg-gradient-to-t from-navy-800/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Me Section -->
+    <section id="about" class="py-20 bg-white border-y border-slate-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="max-w-3xl mx-auto text-center mb-12">
+                <h2 class="text-xs font-bold uppercase tracking-widest text-navy-800 mb-2">Profil Ringkas</h2>
+                <h3 class="text-3xl font-extrabold text-slate-900 sm:text-4xl">Tentang Saya</h3>
+                <div class="w-16 h-1 bg-navy-800 mx-auto mt-4 rounded-full"></div>
+            </div>
+            
+            <div class="bg-slate-50 border border-slate-200 rounded-2xl p-6 sm:p-10 shadow-sm max-w-4xl mx-auto">
+                <p class="text-slate-700 leading-relaxed text-base sm:text-lg mb-6">
+                    Saya adalah lulusan S1 Sosiologi dari Universitas Islam Negeri Sunan Gunung Djati Bandung dengan IPK <strong class="text-navy-800">3,72 / 4,00 (Cumlaude)</strong>. Berpengalaman memimpin organisasi serta mengoordinasikan berbagai kegiatan pengabdian kepada masyarakat yang mengasah kemampuan komunikasi, koordinasi, penyelesaian masalah, dan kerja sama tim.
+                </p>
+                <p class="text-slate-700 leading-relaxed text-base sm:text-lg">
+                    Memiliki integritas tinggi, kemampuan analitis, empati, serta komitmen untuk berkontribusi dalam riset, pengelolaan analisis data, administrasi publik, hingga pembimbingan dan reintegrasi sosial melalui pelayanan masyarakat yang berdampak positif.
+                </p>
+
+                <!-- Key Highlights -->
+                <div class="grid grid-cols-1 sm:grid-cols-3 gap-6 mt-8 pt-8 border-t border-slate-200 text-center">
+                    <div class="p-4 rounded-xl bg-white border border-slate-200">
+                        <div class="text-3xl font-extrabold text-navy-800">3.72</div>
+                        <div class="text-xs font-medium text-slate-500 uppercase mt-1">IPK Cumlaude</div>
+                    </div>
+                    <div class="p-4 rounded-xl bg-white border border-slate-200">
+                        <div class="text-3xl font-extrabold text-navy-800">3+</div>
+                        <div class="text-xs font-medium text-slate-500 uppercase mt-1">Pengalaman Institusi</div>
+                    </div>
+                    <div class="p-4 rounded-xl bg-white border border-slate-200">
+                        <div class="text-3xl font-extrabold text-navy-800">6+</div>
+                        <div class="text-xs font-medium text-slate-500 uppercase mt-1">Sertifikasi Lisensi</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education Section -->
+    <section id="education" class="py-20 bg-slate-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="max-w-3xl mx-auto text-center mb-16">
+                <h2 class="text-xs font-bold uppercase tracking-widest text-navy-800 mb-2">Latar Belakang Akademi</h2>
+                <h3 class="text-3xl font-extrabold text-slate-900 sm:text-4xl">Pendidikan</h3>
+                <div class="w-16 h-1 bg-navy-800 mx-auto mt-4 rounded-full"></div>
+            </div>
+
+            <div class="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-12 gap-8 items-center bg-white border border-slate-200 rounded-2xl p-6 sm:p-8 shadow-sm">
+                <div class="md:col-span-5 flex justify-center">
+                    <div class="relative w-full max-w-xs h-64 rounded-xl overflow-hidden shadow-md">
+                        <img src="https://i.ibb.co.com/zVHHYZ8M/IMG-20260812-WA0143.jpg" alt="Pendidikan Lucky Rezaldi" class="w-full h-full object-cover" onerror="this.src='https://placehold.co/400x300/0B192C/FFF?text=UIN+Sunan+Gunung+Djati'">
+                    </div>
+                </div>
+                <div class="md:col-span-7 space-y-4">
+                    <div class="inline-block px-3 py-1 rounded-md text-xs font-semibold bg-navy-800 text-white">
+                        S1 SOSIOLOGI
+                    </div>
+                    <h4 class="text-2xl font-bold text-slate-900">UIN Sunan Gunung Djati Bandung</h4>
+                    <p class="text-slate-500 text-sm"><i class="fa-solid fa-location-dot text-navy-800 mr-1"></i> Kota Bandung, Jawa Barat, Indonesia</p>
+                    <div class="flex items-center gap-4 text-sm font-semibold text-slate-700 py-2 border-y border-slate-100">
+                        <span>Predikat: <span class="text-emerald-600 font-bold">Cumlaude</span></span>
+                        <span>•</span>
+                        <span>IPK: <span class="text-navy-800 font-bold">3.72 / 4.00</span></span>
+                    </div>
+                    <p class="text-slate-600 text-sm leading-relaxed">
+                        Fokus pada studi dinamika sosial, metode penelitian kuantitatif & kualitatif, pemberdayaan masyarakat, serta analisis perilaku sosial dan kebijakan publik.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="py-20 bg-white border-y border-slate-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="max-w-3xl mx-auto text-center mb-16">
+                <h2 class="text-xs font-bold uppercase tracking-widest text-navy-800 mb-2">Jejak Karir & Kontribusi</h2>
+                <h3 class="text-3xl font-extrabold text-slate-900 sm:text-4xl">Pengalaman Kerja</h3>
+                <div class="w-16 h-1 bg-navy-800 mx-auto mt-4 rounded-full"></div>
+            </div>
+
+            <div class="space-y-16">
+                <!-- Company 1: Trijaya Pratama Futures -->
+                <div class="bg-slate-50 border border-slate-200 rounded-2xl p-6 sm:p-8">
+                    <div class="flex flex-col md:flex-row md:items-center justify-between border-b border-slate-200 pb-4 mb-6">
+                        <div>
+                            <span class="text-xs font-bold uppercase tracking-wider text-navy-800">Agustus 2026 - Oktober 2026</span>
+                            <h4 class="text-2xl font-bold text-slate-900 mt-1">Customer Relation Office</h4>
+                            <h5 class="text-slate-600 font-medium">Trijaya Pratama Futures — Kota Bandung</h5>
+                        </div>
+                        <span class="mt-2 md:mt-0 inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-navy-800 text-white self-start">
+                            Finansial & Relasi
+                        </span>
+                    </div>
+                    <ul class="list-disc list-inside text-slate-700 space-y-2 mb-6 text-sm sm:text-base">
+                        <li>Mengelola analisa data dan pelayanan customer secara profesional.</li>
+                        <li>Membuat dan menyusun agenda kerja manager serta mengelola administrasi keuangan.</li>
+                        <li>Memberikan pelayanan langsung, via telepon, email, maupun media digital untuk menjaga kepuasan klien.</li>
+                    </ul>
+                    
+                    <!-- Gallery Grid (4 images) -->
+                    <div class="grid grid-cols-2 sm:grid-cols-4 gap-3">
+                        <img src="https://i.ibb.co.com/HT3XWggZ/IMG-20261006-082733.jpg" alt="Dokumentasi Trijaya 1" class="w-full h-36 object-cover rounded-xl border border-slate-200 cursor-pointer hover:opacity-90 transition-opacity" onclick="openModal(this.src)" onerror="this.src='https://placehold.co/300x200/0B192C/FFF?text=Trijaya+1'">
+                        <img src="https://i.ibb.co.com/4RZfssvw/IMG-20261007-WA0009.jpg" alt="Dokumentasi Trijaya 2" class="w-full h-36 object-cover rounded-xl border border-slate-200 cursor-pointer hover:opacity-90 transition-opacity" onclick="openModal(this.src)" onerror="this.src='https://placehold.co/300x200/0B192C/FFF?text=Trijaya+2'">
+                        <img src="https://i.ibb.co.com/HT4YwJjn/IMG-20261009-140956.jpg" alt="Dokumentasi Trijaya 3" class="w-full h-36 object-cover rounded-xl border border-slate-200 cursor-pointer hover:opacity-90 transition-opacity" onclick="openModal(this.src)" onerror="this.src='https://placehold.co/300x200/0B192C/FFF?text=Trijaya+3'">
+                        <img src="https://i.ibb.co.com/TMxDfgJh/IMG-20261012-WA0042.jpg" alt="Dokumentasi Trijaya 4" class="w-full h-36 object-cover rounded-xl border border-slate-200 cursor-pointer hover:opacity-90 transition-opacity" onclick="openModal(this.src)" onerror="this.src='https://placehold.co/300x200/0B192C/FFF?text=Trijaya+4'">
+                    </div>
+                </div>
+
+                <!-- Company 2: Dinas Sosial Provinsi Jawa Barat -->
+                <div class="bg-slate-50 border border-slate-200 rounded-2xl p-6 sm:p-8">
+                    <div class="flex flex-col md:flex-row md:items-center justify-between border-b border-slate-200 pb-4 mb-6">
+                        <div>
+                            <span class="text-xs font-bold uppercase tracking-wider text-navy-800">Februari 2025 - Maret 2025</span>
+                            <h4 class="text-2xl font-bold text-slate-900 mt-1">Staf Pemberdayaan</h4>
+                            <h5 class="text-slate-600 font-medium">Dinas Sosial Provinsi Jawa Barat — Kota Cimahi</h5>
+                        </div>
+                        <span class="mt-2 md:mt-0 inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-emerald-700 text-white self-start">
+                            Pemberdayaan Sosial
+                        </span>
+                    </div>
+                    <ul class="list-disc list-inside text-slate-700 space-y-2 mb-6 text-sm sm:text-base">
+                        <li>Mengelola program pemberdayaan batik karya rekan-rekan difabel.</li>
+                        <li>Mengembangkan kualitas hasil karya batik dan mempromosikannya melalui media sosial.</li>
+                        <li>Melakukan pendampingan, pengajaran, serta pelatihan secara intensif.</li>
+                    </ul>
+                    
+                    <!-- Gallery Grid (1 image) -->
+                    <div class="max-w-md">
+                        <img src="https://i.ibb.co.com/7dD9FDPG/Screenshot-20261102-041112-2.jpg" alt="Dokumentasi Dinas Sosial" class="w-full h-48 object-cover rounded-xl border border-slate-200 cursor-pointer hover:opacity-90 transition-opacity" onclick="openModal(this.src)" onerror="this.src='https://placehold.co/400x250/0B192C/FFF?text=Dinsos+Jabar'">
+                    </div>
+                </div>
+
+                <!-- Company 3: Bagian Kesra Kota Bandung -->
+                <div class="bg-slate-50 border border-slate-200 rounded-2xl p-6 sm:p-8">
+                    <div class="flex flex-col md:flex-row md:items-center justify-between border-b border-slate-200 pb-4 mb-6">
+                        <div>
+                            <span class="text-xs font-bold uppercase tracking-wider text-navy-800">Januari 2025 - Februari 2025</span>
+                            <h4 class="text-2xl font-bold text-slate-900 mt-1">Staf Administrasi Kesra</h4>
+                            <h5 class="text-slate-600 font-medium">Bagian Kesra Kota Bandung — Kota Bandung</h5>
+                        </div>
+                        <span class="mt-2 md:mt-0 inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-slate-800 text-white self-start">
+                            Administrasi Publik
+                        </span>
+                    </div>
+                    <ul class="list-disc list-inside text-slate-700 space-y-2 mb-6 text-sm sm:text-base">
+                        <li>Mengerjakan administrasi pendisposisian surat serta pengelolaan dokumen bantuan riwayat pendidikan.</li>
+                        <li>Mengelola sistem aplikasi <strong>Seribu</strong> yang berkolaborasi dengan Diskominfo Kota Bandung.</li>
+                        <li>Meningkatkan efisiensi pengelolaan data, ketelitian dokumen, komunikasi instansi, dan jejaring kerja.</li>
+                    </ul>
+                    
+                    <!-- Gallery Grid (9 images) -->
+                    <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-3">
+                        <img src="https://i.ibb.co.com/6RqRTYjC/IMG-20250106-145834-409.webp" alt="Dokumentasi Kesra 1" class="w-full h-28 object-cover rounded-xl border border-slate-200 cursor-pointer hover:opacity-90 transition-opacity" onclick="openModal(this.src)" onerror="this.src='https://placehold.co/200x150/0B192C/FFF?text=Kesra+1'">
+                        <img src="https://i.ibb.co.com/8LjCL6xG/IMG-20250107-091010-621.webp" alt="Dokumentasi Kesra 2" class="w-full h-28 object-cover rounded-xl border border-slate-200 cursor-pointer hover:opacity-90 transition-opacity" onclick="openModal(this.src)" onerror="this.src='https://placehold.co/200x150/0B192C/FFF?text=Kesra+2'">
+                        <img src="https://i.ibb.co.com/WRNmFS7/IMG-20250113-WA0029.jpg" alt="Dokumentasi Kesra 3" class="w-full h-28 object-cover rounded-xl border border-slate-200 cursor-pointer hover:opacity-90 transition-opacity" onclick="openModal(this.src)" onerror="this.src='https://placehold.co/200x150/0B192C/FFF?text=Kesra+3'">
+                        <img src="https://i.ibb.co.com/NnxdVtKC/IMG-20250114-WA0029.jpg" alt="Dokumentasi Kesra 4" class="w-full h-28 object-cover rounded-xl border border-slate-200 cursor-pointer hover:opacity-90 transition-opacity" onclick="openModal(this.src)" onerror="this.src='https://placehold.co/200x150/0B192C/FFF?text=Kesra+4'">
+                        <img src="https://i.ibb.co.com/F4SLD4KM/IMG-20250112-WA0007.jpg" alt="Dokumentasi Kesra 5" class="w-full h-28 object-cover rounded-xl border border-slate-200 cursor-pointer hover:opacity-90 transition-opacity" onclick="openModal(this.src)" onerror="this.src='https://placehold.co/200x150/0B192C/FFF?text=Kesra+5'">
+                        <img src="https://i.ibb.co.com/WWDQHc7s/IMG-20250114-WA0019.jpg" alt="Dokumentasi Kesra 6" class="w-full h-28 object-cover rounded-xl border border-slate-200 cursor-pointer hover:opacity-90 transition-opacity" onclick="openModal(this.src)" onerror="this.src='https://placehold.co/200x150/0B192C/FFF?text=Kesra+6'">
+                        <img src="https://i.ibb.co.com/gZ08Wdr5/IMG-20250114-WA0030.jpg" alt="Dokumentasi Kesra 7" class="w-full h-28 object-cover rounded-xl border border-slate-200 cursor-pointer hover:opacity-90 transition-opacity" onclick="openModal(this.src)" onerror="this.src='https://placehold.co/200x150/0B192C/FFF?text=Kesra+7'">
+                        <img src="https://i.ibb.co.com/svdk6HXP/IMG-20250117-WA0019.jpg" alt="Dokumentasi Kesra 8" class="w-full h-28 object-cover rounded-xl border border-slate-200 cursor-pointer hover:opacity-90 transition-opacity" onclick="openModal(this.src)" onerror="this.src='https://placehold.co/200x150/0B192C/FFF?text=Kesra+8'">
+                        <img src="https://i.ibb.co.com/ZpR2DH47/IMG-20250109-WA0012.jpg" alt="Dokumentasi Kesra 9" class="w-full h-28 object-cover rounded-xl border border-slate-200 cursor-pointer hover:opacity-90 transition-opacity" onclick="openModal(this.src)" onerror="this.src='https://placehold.co/200x150/0B192C/FFF?text=Kesra+9'">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects & Publications Section -->
+    <section id="projects" class="py-20 bg-slate-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="max-w-3xl mx-auto text-center mb-16">
+                <h2 class="text-xs font-bold uppercase tracking-widest text-navy-800 mb-2">Karya Ilmiah & Prestasi</h2>
+                <h3 class="text-3xl font-extrabold text-slate-900 sm:text-4xl">Proyek & Publikasi</h3>
+                <div class="w-16 h-1 bg-navy-800 mx-auto mt-4 rounded-full"></div>
+            </div>
+
+            <div class="max-w-4xl mx-auto bg-white border border-slate-200 rounded-2xl p-6 sm:p-8 shadow-sm">
+                <div class="flex items-center gap-3 mb-4">
+                    <span class="px-3 py-1 rounded-full text-xs font-bold bg-navy-800 text-white">Jurnal Ilmiah 2025</span>
+                    <span class="text-xs text-slate-500 font-medium">Pengembangan Masyarakat Islam</span>
+                </div>
+                <h4 class="text-xl sm:text-2xl font-bold text-slate-900 mb-3">
+                    Penelitian Pengembangan Konsep Ekonomi Home Industri & Kesejahteraan Sosial
+                </h4>
+                <p class="text-slate-600 text-sm sm:text-base leading-relaxed mb-6">
+                    Mempublikasikan karya ilmiah hasil penelitian dalam mengembangkan konsep dan teori berkaitan dengan kajian Pengembangan Masyarakat Islam, melingkupi pemberdayaan ekonomi masyarakat pada skala Industri Rumahan (Home Industry) serta peningkatan taraf kesejahteraan sosial masyarakat lokal.
+                </p>
+
+                <!-- Project Images Grid (4 Images) -->
+                <div class="grid grid-cols-2 sm:grid-cols-4 gap-4">
+                    <div class="space-y-2">
+                        <img src="https://i.ibb.co.com/Z1vWRV2Q/Screenshot-20261102-143935-3.jpg" alt="Project 1" class="w-full h-40 object-cover rounded-xl border border-slate-200 cursor-pointer hover:opacity-90 transition-opacity" onclick="openModal(this.src)" onerror="this.src='https://placehold.co/300x400/0B192C/FFF?text=Halaman+Depan'">
+                        <span class="text-xs text-slate-500 block text-center">Tampilan Dokumen</span>
+                    </div>
+                    <div class="space-y-2">
+                        <img src="https://i.ibb.co.com/JwPQgyM9/1-cover.jpg" alt="Project Cover" class="w-full h-40 object-cover rounded-xl border border-slate-200 cursor-pointer hover:opacity-90 transition-opacity" onclick="openModal(this.src)" onerror="this.src='https://placehold.co/300x400/0B192C/FFF?text=Cover'">
+                        <span class="text-xs text-slate-500 block text-center">Sampul Jurnal</span>
+                    </div>
+                    <div class="space-y-2">
+                        <img src="https://i.ibb.co.com/4w9QDCHy/2-abstrak.jpg" alt="Project Abstrak" class="w-full h-40 object-cover rounded-xl border border-slate-200 cursor-pointer hover:opacity-90 transition-opacity" onclick="openModal(this.src)" onerror="this.src='https://placehold.co/300x400/0B192C/FFF?text=Abstrak'">
+                        <span class="text-xs text-slate-500 block text-center">Abstrak Penelitian</span>
+                    </div>
+                    <div class="space-y-2">
+                        <img src="https://i.ibb.co.com/bj3yKGhy/TTD-2.jpg" alt="Project TTD" class="w-full h-40 object-cover rounded-xl border border-slate-200 cursor-pointer hover:opacity-90 transition-opacity" onclick="openModal(this.src)" onerror="this.src='https://placehold.co/300x400/0B192C/FFF?text=Pengesahan'">
+                        <span class="text-xs text-slate-500 block text-center">Lembar Pengesahan</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills & Software Section -->
+    <section id="skills" class="py-20 bg-white border-y border-slate-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="max-w-3xl mx-auto text-center mb-16">
+                <h2 class="text-xs font-bold uppercase tracking-widest text-navy-800 mb-2">Kompetensi & Alat Usaha</h2>
+                <h3 class="text-3xl font-extrabold text-slate-900 sm:text-4xl">Keahlian & Perangkat Lunak</h3>
+                <div class="w-16 h-1 bg-navy-800 mx-auto mt-4 rounded-full"></div>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+                <!-- Professional Skills (Badges) -->
+                <div class="bg-slate-50 border border-slate-200 rounded-2xl p-6 sm:p-8">
+                    <h4 class="text-xl font-bold text-slate-900 mb-6 flex items-center gap-2">
+                        <i class="fa-solid fa-user-gear text-navy-800"></i> My Skills (Keahlian Utama)
+                    </h4>
+                    <div class="flex flex-wrap gap-3">
+                        <span class="px-4 py-2 bg-white border border-slate-200 rounded-xl text-slate-700 text-sm font-medium shadow-sm hover:border-navy-800 transition-colors flex items-center gap-2">
+                            <i class="fa-solid fa-check-double text-emerald-500"></i> Leadership & Kepemimpinan
+                        </span>
+                        <span class="px-4 py-2 bg-white border border-slate-200 rounded-xl text-slate-700 text-sm font-medium shadow-sm hover:border-navy-800 transition-colors flex items-center gap-2">
+                            <i class="fa-solid fa-magnifying-glass-chart text-emerald-500"></i> Social Research & Riset
+                        </span>
+                        <span class="px-4 py-2 bg-white border border-slate-200 rounded-xl text-slate-700 text-sm font-medium shadow-sm hover:border-navy-800 transition-colors flex items-center gap-2">
+                            <i class="fa-solid fa-chart-line text-emerald-500"></i> Data Analysis
+                        </span>
+                        <span class="px-4 py-2 bg-white border border-slate-200 rounded-xl text-slate-700 text-sm font-medium shadow-sm hover:border-navy-800 transition-colors flex items-center gap-2">
+                            <i class="fa-solid fa-lightbulb text-emerald-500"></i> Problem Solving
+                        </span>
+                        <span class="px-4 py-2 bg-white border border-slate-200 rounded-xl text-slate-700 text-sm font-medium shadow-sm hover:border-navy-800 transition-colors flex items-center gap-2">
+                            <i class="fa-solid fa-bullhorn text-emerald-500"></i> Public Relations & Humas
+                        </span>
+                        <span class="px-4 py-2 bg-white border border-slate-200 rounded-xl text-slate-700 text-sm font-medium shadow-sm hover:border-navy-800 transition-colors flex items-center gap-2">
+                            <i class="fa-solid fa-tasks text-emerald-500"></i> Project & Administrative Management
+                        </span>
+                        <span class="px-4 py-2 bg-white border border-slate-200 rounded-xl text-slate-700 text-sm font-medium shadow-sm hover:border-navy-800 transition-colors flex items-center gap-2">
+                            <i class="fa-solid fa-handshake text-emerald-500"></i> Financial Insight & Client Support
+                        </span>
+                    </div>
+                </div>
+
+                <!-- Software Skills with Logos -->
+                <div class="bg-slate-50 border border-slate-200 rounded-2xl p-6 sm:p-8">
+                    <h4 class="text-xl font-bold text-slate-900 mb-6 flex items-center gap-2">
+                        <i class="fa-solid fa-laptop-code text-navy-800"></i> Software Skills (Perangkat Lunak)
+                    </h4>
+                    <div class="grid grid-cols-2 sm:grid-cols-3 gap-4">
+                        <!-- Excel -->
+                        <div class="bg-white p-4 rounded-xl border border-slate-200 flex flex-col items-center text-center shadow-sm hover:shadow-md transition-shadow">
+                            <i class="fa-solid fa-file-excel text-emerald-600 text-4xl mb-2"></i>
+                            <span class="text-xs font-semibold text-slate-800">Microsoft Excel</span>
+                        </div>
+                        <!-- Word -->
+                        <div class="bg-white p-4 rounded-xl border border-slate-200 flex flex-col items-center text-center shadow-sm hover:shadow-md transition-shadow">
+                            <i class="fa-solid fa-file-word text-blue-600 text-4xl mb-2"></i>
+                            <span class="text-xs font-semibold text-slate-800">Microsoft Word</span>
+                        </div>
+                        <!-- PowerPoint -->
+                        <div class="bg-white p-4 rounded-xl border border-slate-200 flex flex-col items-center text-center shadow-sm hover:shadow-md transition-shadow">
+                            <i class="fa-solid fa-file-powerpoint text-orange-600 text-4xl mb-2"></i>
+                            <span class="text-xs font-semibold text-slate-800">PowerPoint</span>
+                        </div>
+                        <!-- Office -->
+                        <div class="bg-white p-4 rounded-xl border border-slate-200 flex flex-col items-center text-center shadow-sm hover:shadow-md transition-shadow">
+                            <i class="fa-solid fa-building-columns text-red-600 text-4xl mb-2"></i>
+                            <span class="text-xs font-semibold text-slate-800">Microsoft Office</span>
+                        </div>
+                        <!-- Google Spreadsheets -->
+                        <div class="bg-white p-4 rounded-xl border border-slate-200 flex flex-col items-center text-center shadow-sm hover:shadow-md transition-shadow">
+                            <i class="fa-solid fa-table text-emerald-500 text-4xl mb-2"></i>
+                            <span class="text-xs font-semibold text-slate-800">Google Spreadsheets</span>
+                        </div>
+                        <!-- Canva -->
+                        <div class="bg-white p-4 rounded-xl border border-slate-200 flex flex-col items-center text-center shadow-sm hover:shadow-md transition-shadow">
+                            <i class="fa-solid fa-palette text-cyan-500 text-4xl mb-2"></i>
+                            <span class="text-xs font-semibold text-slate-800">Canva Design</span>
+                        </div>
+                        <!-- Capcut -->
+                        <div class="bg-white p-4 rounded-xl border border-slate-200 flex flex-col items-center text-center shadow-sm hover:shadow-md transition-shadow sm:col-span-3">
+                            <i class="fa-solid fa-video text-slate-900 text-4xl mb-2"></i>
+                            <span class="text-xs font-semibold text-slate-800">CapCut Video Editing</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Certificate Section -->
+    <section id="certificates" class="py-20 bg-slate-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="max-w-3xl mx-auto text-center mb-16">
+                <h2 class="text-xs font-bold uppercase tracking-widest text-navy-800 mb-2">Pengakuan & Pelatihan</h2>
+                <h3 class="text-3xl font-extrabold text-slate-900 sm:text-4xl">Sertifikasi</h3>
+                <div class="w-16 h-1 bg-navy-800 mx-auto mt-4 rounded-full"></div>
+            </div>
+
+            <!-- 6 Certificate Cards Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Cert 1: ICT Word -->
+                <div class="bg-white border border-slate-200 rounded-2xl overflow-hidden shadow-sm hover:shadow-lg transition-all duration-300 flex flex-col">
+                    <div class="h-48 overflow-hidden bg-slate-100">
+                        <img src="https://i.ibb.co.com/WpgDzZfQ/ICT-2.jpg" alt="Sertifikat ICT Word" class="w-full h-full object-cover cursor-pointer hover:scale-105 transition-transform duration-300" onclick="openModal(this.src)" onerror="this.src='https://placehold.co/400x250/0B192C/FFF?text=ICT+Word+Specialist'">
+                    </div>
+                    <div class="p-6 flex-1 flex flex-col justify-between">
+                        <div>
+                            <span class="text-xs font-semibold text-navy-800">PTIPD UIN Sunan Gunung Djati</span>
+                            <h4 class="text-lg font-bold text-slate-900 mt-1">Microsoft Office Specialist: Word</h4>
+                        </div>
+                        <div class="mt-4 pt-4 border-t border-slate-100 text-xs text-slate-500">
+                            Oktober 2024 - Desember 2024
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Cert 2: TOAFL -->
+                <div class="bg-white border border-slate-200 rounded-2xl overflow-hidden shadow-sm hover:shadow-lg transition-all duration-300 flex flex-col">
+                    <div class="h-48 overflow-hidden bg-slate-100">
+                        <img src="https://i.ibb.co.com/C34tSMK7/1-20261102-143100-0000.png" alt="Sertifikat TOAFL" class="w-full h-full object-cover cursor-pointer hover:scale-105 transition-transform duration-300" onclick="openModal(this.src)" onerror="this.src='https://placehold.co/400x250/0B192C/FFF?text=TOAFL+Certificate'">
+                    </div>
+                    <div class="p-6 flex-1 flex flex-col justify-between">
+                        <div>
+                            <span class="text-xs font-semibold text-navy-800">Language Center UIN Sunan Gunung Djati</span>
+                            <h4 class="text-lg font-bold text-slate-900 mt-1">TOAFL (Test of Arabic as a Foreign Language)</h4>
+                        </div>
+                        <div class="mt-4 pt-4 border-t border-slate-100 text-xs text-slate-500">
+                            Oktober 2026
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Cert 3: TOEFA -->
+                <div class="bg-white border border-slate-200 rounded-2xl overflow-hidden shadow-sm hover:shadow-lg transition-all duration-300 flex flex-col">
+                    <div class="h-48 overflow-hidden bg-slate-100">
+                        <img src="https://i.ibb.co.com/Q7FhM6hH/2-20261102-143100-0001.png" alt="Sertifikat TOEFA" class="w-full h-full object-cover cursor-pointer hover:scale-105 transition-transform duration-300" onclick="openModal(this.src)" onerror="this.src='https://placehold.co/400x250/0B192C/FFF?text=TOEFA+Certificate'">
+                    </div>
+                    <div class="p-6 flex-1 flex flex-col justify-between">
+                        <div>
+                            <span class="text-xs font-semibold text-navy-800">Language Center UIN Sunan Gunung Djati</span>
+                            <h4 class="text-lg font-bold text-slate-900 mt-1">TOEFA (Test of English for Academic)</h4>
+                        </div>
+                        <div class="mt-4 pt-4 border-t border-slate-100 text-xs text-slate-500">
+                            November 2024
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Cert 4: Inovasi Penulisan -->
+                <div class="bg-white border border-slate-200 rounded-2xl overflow-hidden shadow-sm hover:shadow-lg transition-all duration-300 flex flex-col">
+                    <div class="h-48 overflow-hidden bg-slate-100">
+                        <img src="https://i.ibb.co.com/yBF7QT7z/9f380bed-fdb6-443b-bde9-5244531a8c3a-e-Sertifikat-Webinar-Inovasi-Metode-Penelitian-Sosial-1.jpg" alt="Sertifikat Inovasi Penulisan" class="w-full h-full object-cover cursor-pointer hover:scale-105 transition-transform duration-300" onclick="openModal(this.src)" onerror="this.src='https://placehold.co/400x250/0B192C/FFF?text=Penulisan+Digital'">
+                    </div>
+                    <div class="p-6 flex-1 flex flex-col justify-between">
+                        <div>
+                            <span class="text-xs font-semibold text-navy-800">UIN Sunan Gunung Djati Bandung</span>
+                            <h4 class="text-lg font-bold text-slate-900 mt-1">Inovasi Metode Kepenulisan & Penelitian Sosial</h4>
+                        </div>
+                        <div class="mt-4 pt-4 border-t border-slate-100 text-xs text-slate-500">
+                            November 2025
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Cert 5: MySkill -->
+                <div class="bg-white border border-slate-200 rounded-2xl overflow-hidden shadow-sm hover:shadow-lg transition-all duration-300 flex flex-col">
+                    <div class="h-48 overflow-hidden bg-slate-100">
+                        <img src="https://i.ibb.co.com/fVwMG4Gk/Gemini-Generated-Image-p4kn20p4kn20p4kn.jpg" alt="Sertifikat MySkill" class="w-full h-full object-cover cursor-pointer hover:scale-105 transition-transform duration-300" onclick="openModal(this.src)" onerror="this.src='https://placehold.co/400x250/0B192C/FFF?text=MySkill+Certificate'">
+                    </div>
+                    <div class="p-6 flex-1 flex flex-col justify-between">
+                        <div>
+                            <span class="text-xs font-semibold text-navy-800">MySkill Learning</span>
+                            <h4 class="text-lg font-bold text-slate-900 mt-1">Social Media & Influencer Marketing</h4>
+                        </div>
+                        <div class="mt-4 pt-4 border-t border-slate-100 text-xs text-slate-500">
+                            Oktober 2026
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Cert 6: Digital Marketing Revo U -->
+                <div class="bg-white border border-slate-200 rounded-2xl overflow-hidden shadow-sm hover:shadow-lg transition-all duration-300 flex flex-col">
+                    <div class="h-48 overflow-hidden bg-slate-100">
+                        <img src="https://i.ibb.co.com/zHFKZJLc/Gemini-Generated-Image-s7li42s7li42s7li.jpg" alt="Sertifikat Digital Marketing" class="w-full h-full object-cover cursor-pointer hover:scale-105 transition-transform duration-300" onclick="openModal(this.src)" onerror="this.src='https://placehold.co/400x250/0B192C/FFF?text=Digital+Marketing'">
+                    </div>
+                    <div class="p-6 flex-1 flex flex-col justify-between">
+                        <div>
+                            <span class="text-xs font-semibold text-navy-800">Revolusi Cita Edukasi</span>
+                            <h4 class="text-lg font-bold text-slate-900 mt-1">Digital Marketing Professional</h4>
+                        </div>
+                        <div class="mt-4 pt-4 border-t border-slate-100 text-xs text-slate-500">
+                            Oktober 2026
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-white border-t border-slate-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="max-w-3xl mx-auto text-center mb-16">
+                <h2 class="text-xs font-bold uppercase tracking-widest text-navy-800 mb-2">Mari Terhubung</h2>
+                <h3 class="text-3xl font-extrabold text-slate-900 sm:text-4xl">Kontak Saya</h3>
+                <div class="w-16 h-1 bg-navy-800 mx-auto mt-4 rounded-full"></div>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 max-w-5xl mx-auto">
+                <!-- Info Contact -->
+                <div class="lg:col-span-5 space-y-6">
+                    <div class="flex items-start gap-4 p-5 bg-slate-50 border border-slate-200 rounded-xl">
+                        <div class="w-12 h-12 rounded-lg bg-navy-800 text-white flex items-center justify-center text-xl shrink-0">
+                            <i class="fa-solid fa-envelope"></i>
+                        </div>
+                        <div>
+                            <h4 class="text-sm font-semibold text-slate-500">Email</h4>
+                            <a href="mailto:mluckyrezaldi27@gmail.com" class="text-base font-bold text-slate-900 hover:text-navy-800 break-all">
+                                mluckyrezaldi27@gmail.com
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="flex items-start gap-4 p-5 bg-slate-50 border border-slate-200 rounded-xl">
+                        <div class="w-12 h-12 rounded-lg bg-emerald-600 text-white flex items-center justify-center text-xl shrink-0">
+                            <i class="fa-solid fa-phone"></i>
+                        </div>
+                        <div>
+                            <h4 class="text-sm font-semibold text-slate-500">Nomor HP / WhatsApp</h4>
+                            <a href="https://wa.me/6285173102427" target="_blank" class="text-base font-bold text-slate-900 hover:text-navy-800">
+                                +62 851-7310-2427
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="flex items-start gap-4 p-5 bg-slate-50 border border-slate-200 rounded-xl">
+                        <div class="w-12 h-12 rounded-lg bg-black text-white flex items-center justify-center text-xl shrink-0">
+                            <i class="fa-solid fa-location-dot"></i>
+                        </div>
+                        <div>
+                            <h4 class="text-sm font-semibold text-slate-500">Lokasi Dominan</h4>
+                            <p class="text-base font-bold text-slate-900">
+                                Cibuntu Sayuran, Bandung, Jawa Barat
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Simple Contact Form -->
+                <div class="lg:col-span-7 bg-slate-50 border border-slate-200 rounded-2xl p-6 sm:p-8">
+                    <form id="contactForm" onsubmit="handleFormSubmit(event)" class="space-y-4">
+                        <div>
+                            <label class="block text-xs font-semibold uppercase text-slate-700 mb-1">Nama Lengkap</label>
+                            <input type="text" required placeholder="Masukkan nama Anda" class="w-full px-4 py-3 rounded-xl border border-slate-300 focus:outline-none focus:ring-2 focus:ring-navy-800 text-slate-800 bg-white">
+                        </div>
+                        <div>
+                            <label class="block text-xs font-semibold uppercase text-slate-700 mb-1">Email Anda</label>
+                            <input type="email" required placeholder="contoh@email.com" class="w-full px-4 py-3 rounded-xl border border-slate-300 focus:outline-none focus:ring-2 focus:ring-navy-800 text-slate-800 bg-white">
+                        </div>
+                        <div>
+                            <label class="block text-xs font-semibold uppercase text-slate-700 mb-1">Pesan</label>
+                            <textarea rows="4" required placeholder="Tuliskan pesan atau penawaran kerja sama di sini..." class="w-full px-4 py-3 rounded-xl border border-slate-300 focus:outline-none focus:ring-2 focus:ring-navy-800 text-slate-800 bg-white"></textarea>
+                        </div>
+                        <button type="submit" class="w-full py-3.5 rounded-xl text-white bg-navy-800 hover:bg-black font-semibold shadow-md transition-all">
+                            Kirim Pesan
+                        </button>
+                    </form>
+                    <div id="formSuccess" class="hidden mt-4 p-4 rounded-xl bg-emerald-100 text-emerald-800 text-sm font-medium text-center">
+                        Terima kasih! Pesan Anda telah berhasil terkirim.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-navy-800 text-white py-8 border-t border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-4">
+            <p class="text-sm text-slate-300">
+                &copy; 2026 <span class="font-bold text-white">Muhammad Lucky Rezaldi</span>. All Rights Reserved.
+            </p>
+            <p class="text-xs text-slate-400">
+                Designed & Built with Analytical Precision and Excellence.
+            </p>
+        </div>
+    </footer>
+
+    <!-- Image Modal Lightbox -->
+    <div id="imageModal" class="fixed inset-0 z-50 hidden bg-black/80 backdrop-blur-sm flex items-center justify-center p-4">
+        <div class="relative max-w-4xl w-full max-h-[90vh] flex flex-col items-center justify-center">
+            <button onclick="closeModal()" class="absolute -top-10 right-0 text-white text-3xl hover:text-slate-300 focus:outline-none">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+            <img id="modalImage" src="" alt="Pratinjau Gambar" class="max-w-full max-h-[85vh] rounded-lg shadow-2xl object-contain">
+        </div>
+    </div>
+
+    <!-- JavaScript Logic -->
+    <script>
+        // Mobile Navigation Toggle
+        const menuBtn = document.getElementById('menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Close mobile menu on link click
+        mobileMenu.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+
+        // Image Lightbox Modal Functions
+        const modal = document.getElementById('imageModal');
+        const modalImg = document.getElementById('modalImage');
+
+        function openModal(src) {
+            modalImg.src = src;
+            modal.classList.remove('hidden');
+            document.body.classList.add('modal-active');
+        }
+
+        function closeModal() {
+            modal.classList.add('hidden');
+            modalImg.src = '';
+            document.body.classList.remove('modal-active');
+        }
+
+        // Close modal when clicking outside image
+        modal.addEventListener('click', (e) => {
+            if (e.target === modal) {
+                closeModal();
+            }
+        });
+
+        // Handle Contact Form Submission
+        function handleFormSubmit(event) {
+            event.preventDefault();
+            const successMsg = document.getElementById('formSuccess');
+            const form = document.getElementById('contactForm');
+            
+            form.reset();
+            successMsg.classList.remove('hidden');
+            
+            setTimeout(() => {
+                successMsg.classList.add('hidden');
+            }, 5000);
+        }
+    </script>
+</body>
+</html>
